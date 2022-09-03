@@ -28,8 +28,8 @@ export default {
   font-weight: bold;
   font-size: 15px;
 }
+
 .introBox {
-  // background: orange;
   padding: 20px 20px 10px;
 }
 

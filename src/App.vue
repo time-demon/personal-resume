@@ -2,16 +2,10 @@
   <div id="app">
     <router-view></router-view>
     <div class="github">
-      <i class="sg sg-github-fill"></i>
+      <a target="_blank" href="https://github.com/time-demon"><i class="sg sg-github-fill"></i></a>
     </div>
   </div>
 </template>
-<script>
-export default {
-  methods: {
-  }
-}
-</script>
 
 <style lang="scss">
 .el-message-box {
@@ -24,12 +18,16 @@ export default {
 
 .github {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 18px;
+  right: 18px;
 
-  >i {
-    font-size: 30px;
-    cursor: pointer;
+  >a {
+    text-decoration: none !important;
+
+    >i {
+      font-size: 30px;
+      cursor: pointer;
+    }
   }
 }
 

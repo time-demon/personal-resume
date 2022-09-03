@@ -12,8 +12,8 @@
         <div class="projectTitle">
           <p class="bold">时光搜题小程序 - 微信小程序</p>
           <p class="projectTitleRight">
-            <a href=""><i class="sg sg-gitee-fill-round"></i></a>
-            <a href=""><i class="sg sg-github-fill"></i></a>
+            <a target="_blank" href=""><i class="sg sg-gitee-fill-round"></i></a>
+            <a target="_blank" href=""><i class="sg sg-github-fill"></i></a>
             <span>|</span>
             <a href="javascript:void (0)" @click="openImg('时光搜题小程序', 'https://img.timebk.cn/时光搜题/时光搜题小程序.jpg')">线上体验</a>
           </p>
@@ -39,8 +39,10 @@
         <div class="projectTitle">
           <p class="bold">个人简历 - Vue版</p>
           <p class="projectTitleRight">
-            <a href=""><i class="sg sg-gitee-fill-round"></i></a>
-            <a href=""><i class="sg sg-github-fill"></i></a>
+            <a target="_blank" href="https://gitee.com/time-demon/personal-resume"><i
+                class="sg sg-gitee-fill-round"></i></a>
+            <a target="_blank" href="https://github.com/time-demon/personal-resume"><i
+                class="sg sg-github-fill"></i></a>
             <span>|</span>
             <a href="javascript:void (0)" @click="openImg('个人简历', 'https://img.timebk.cn/时光搜题/个人简历Vue.png')">线上体验</a>
           </p>

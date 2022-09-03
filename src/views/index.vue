@@ -1,21 +1,34 @@
 <template>
   <div :class="$store.state.isMobile ? 'pageBox pageBox_mobile' : 'pageBox'">
-    <div class="sideBox">
-      <div class="sideTool" @click="docPrint">
-        <i class="sg sg-pdf"></i>
-      </div>
+
+    <div class="copyright">
+      &copy; Author 时光 v1.0.2
     </div>
+
+    <!-- 简历 -->
     <div class="cartBox" id="print" v-loading="loading" element-loading-text="准备下载PDF"
       element-loading-spinner="el-icon-loading">
       <myInforBox />
       <myIntroBox />
     </div>
-    <span id="endprint"></span>
-    <div class="moreBox">
+    <!-- 简历 -->
+
+    <!-- 右下角 -->
+    <div class="sideBox">
+      <div class="sideTool" @click="pdfDown">
+        <i class="sg sg-pdf"></i>
+      </div>
+    </div>
+    <!-- 右下角 -->
+
+    <!-- 底部 -->
+    <div class="footer">
       如果您想了解更多关于我，请
-      <a href="javascript:void(0)" @click="open">点击此处</a> 或访问
+      <a href="javascript:void(0)" @click="QQopen">点击此处</a> 或访问
       <a target="_blank" href="https://timebk.cn/">我的博客</a>
     </div>
+    <!-- 底部 -->
+
   </div>
 </template>
 
@@ -36,6 +49,8 @@ export default {
     }
   },
   watch: {
+
+    // 动态监听窗口尺寸
     clientWidth(val) {
       if (val < 840) {
         this.display = 'block';
@@ -44,29 +59,31 @@ export default {
         this.display = 'grid';
         this.$store.state.isMobile = false;
       }
-    }
+    },
+
   },
   mounted() {
-    let _this = this;
+
+    // 挂载后获取窗口尺寸
     window.onresize = () => {
       return (() => {
         window.clientWidth = document.documentElement.clientWidth
-        _this.clientWidth = document.documentElement.clientWidth
+        this.clientWidth = document.documentElement.clientWidth
       })()
     }
-
     if (this.clientWidth < 840) {
       this.display = 'block';
       this.$store.state.isMobile = true;
     } else {
       this.display = 'grid';
       this.$store.state.isMobile = false;
-    }
+    };
 
   },
   methods: {
 
-    docPrint() {
+    // 下载简历为PDF
+    pdfDown() {
       htmlToPdf.downloadPDF("resultOriginal", "个人简历 - 何贵江");
       this.loading = true
       setTimeout(() => {
@@ -77,7 +94,9 @@ export default {
         });
       }, 1000)
     },
-    open() {
+
+    // 打开联系我QQ弹窗
+    QQopen() {
       this.$alert(
         "<img src='https://img.timebk.cn/时光搜题/手机QQ扫码加好友.png'>",
         "QQ扫码添加我",
@@ -93,6 +112,13 @@ export default {
 </script>
 
 <style lang="scss">
+.copyright {
+  font-size: 12px;
+  text-align: right;
+  padding: 0 5px;
+  color: #aaa;
+}
+
 .pageBox {
   max-width: 1024px;
   margin: auto;
@@ -182,7 +208,7 @@ export default {
     }
   }
 
-  >.moreBox {
+  >.footer {
     text-align: center;
     margin: 20px 0;
 

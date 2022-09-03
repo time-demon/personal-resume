@@ -37,8 +37,6 @@
           <a target="_blank" href="https://blog.csdn.net/qq_19322833">
             <span>CSDN站</span> <i class="sg sg-csdn1"></i>
           </a>
-        </p>
-        <p>
           <a target="_blank" href="https://juejin.cn/user/770072696587341">
             <span>稀土掘金站</span> <i class="sg sg-signal"></i>
           </a>
@@ -47,10 +45,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style lang="scss" scoped>
 .topBox {
@@ -77,6 +71,7 @@ export default {};
     display: flex;
     vertical-align: top;
     align-items: center;
+
 
     >.post {
       font-weight: 300;
@@ -153,6 +148,8 @@ export default {};
 
     >p {
       >a {
+        padding-left: 10px;
+
         >i {
           font-size: 12px;
           background: #fff;
