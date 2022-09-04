@@ -1,19 +1,17 @@
-# 个人简历
+体验地址：https://my.timebk.cn/
+# 【原创响应式】个人简历 Vue2版
 
-## Project setup
+## 克隆项目后，安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 运行开发模式
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 打包项目
 ```
 npm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
