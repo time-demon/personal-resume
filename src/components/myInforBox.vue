@@ -101,13 +101,11 @@
       justify-content: center;
     }
 
-    >.bottomBox {
-      display: block;
-    }
   }
 
   >.bottomBox {
     display: block;
+    letter-spacing: 1px;
 
     >.rightBox {
       display: flex;

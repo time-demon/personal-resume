@@ -1,5 +1,6 @@
 <template>
   <div class="introBox">
+
     <div class="titleBox">
       <p class="line"></p>
       <p class="title">
@@ -28,6 +29,7 @@
         </li>
       </ul>
     </div>
+
   </div>
 </template>
 
@@ -36,7 +38,4 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.introCon {
-  padding: 0 30px;
-}
 </style>

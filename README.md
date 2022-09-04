@@ -1,17 +1,19 @@
-体验地址：https://my.timebk.cn/
-# 【原创响应式】个人简历 Vue版
+# jianli
 
-## 克隆项目后，安装依赖
+## Project setup
 ```
 npm install
 ```
 
-### 运行开发模式
+### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### 打包项目
+### Compiles and minifies for production
 ```
 npm run build
 ```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -1,10 +1,6 @@
 <template>
   <div :class="$store.state.isMobile ? 'pageBox pageBox_mobile' : 'pageBox'">
 
-    <div class="copyright">
-      &copy; Author 时光 v1.0.2
-    </div>
-
     <!-- 简历 -->
     <div class="cartBox" id="print" v-loading="loading" element-loading-text="准备下载PDF"
       element-loading-spinner="el-icon-loading">
@@ -112,13 +108,6 @@ export default {
 </script>
 
 <style lang="scss">
-.copyright {
-  font-size: 12px;
-  text-align: right;
-  padding: 0 5px;
-  color: #aaa;
-}
-
 .pageBox {
   max-width: 1024px;
   margin: auto;
@@ -211,6 +200,7 @@ export default {
   >.footer {
     text-align: center;
     margin: 20px 0;
+    padding: 0 5px;
 
     a {
       text-decoration: underline;
@@ -226,7 +216,7 @@ export default {
 
     >.myInforBox {
       border-radius: 0;
-      padding: 10px 20px;
+      padding: 10px 15px;
     }
 
     >.myIntroBox {
@@ -235,13 +225,17 @@ export default {
       padding: 0;
 
       .introBox {
-        padding: 20px 0;
+        padding: 20px 0 10px;
       }
     }
   }
 
   >.moreBox {
     font-size: 12px;
+  }
+
+  >.footer {
+    font-size: 14px;
   }
 }
 
