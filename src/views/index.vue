@@ -21,7 +21,7 @@
     <div class="footer">
       如果您想了解更多关于我，请
       <a href="javascript:void(0)" @click="QQopen">点击此处</a> 或访问
-      <a target="_blank" href="https://timebk.cn/">我的博客</a>
+      <a target="_blank" :href="myiInfo.blog">我的博客</a>
     </div>
     <!-- 底部 -->
 
@@ -73,6 +73,9 @@ export default {
       }
     },
 
+  },
+  created() {
+    document.title = this.myiInfo.name + ' - 我的个人简历'
   },
   mounted() {
 
