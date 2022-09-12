@@ -21,8 +21,14 @@
             </a>
           </p>
           <p class="projectTitleRight">
-            <a target="_blank" :href="item.url.gitee"><i class="sg sg-gitee-fill-round"></i></a>
-            <a target="_blank" :href="item.url.github"><i class="sg sg-github-fill"></i></a>
+            <a :target="item.url.gitee == '' ? '' : '_blank'"
+              :href="item.url.gitee == '' ? 'javascript:void(0)' : item.url.gitee">
+              <i class="sg sg-gitee-fill-round"></i>
+            </a>
+            <a :target="item.url.github == '' ? '' : '_blank'"
+              :href="item.url.github == '' ? 'javascript:void(0)' : item.url.github">
+              <i class="sg sg-github-fill"></i>
+            </a>
             <span>|</span>
             <a href="javascript:void (0)" @click="openImg(item.open.name, item.open.url)"
               v-if="item.open.type == 0">线上体验</a>

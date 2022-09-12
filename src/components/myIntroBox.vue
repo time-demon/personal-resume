@@ -1,6 +1,7 @@
 <template>
   <div class="myIntroBox">
     <div class="myIntroBox_left">
+      <jobTo :myiInfo="myiInfo" />
       <skill />
       <expProj />
     </div>
@@ -14,8 +15,13 @@
 import skill from "@/components/intros/skill.vue";
 import openProj from "@/components/intros/openProj.vue";
 import expProj from "@/components/intros/expProj.vue";
+import jobTo from "@/components/intros/jobTo.vue";
 export default {
+  props: {
+    myiInfo: {}
+  },
   components: {
+    jobTo,
     skill,
     openProj,
     expProj,
@@ -30,7 +36,7 @@ export default {
 }
 
 .introBox {
-  padding: 20px 20px 10px;
+  padding: 20px 20px 0px;
 
   >.introCon {
     padding: 0 10px 0 30px;

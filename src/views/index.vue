@@ -4,8 +4,8 @@
     <!-- 简历 -->
     <div class="cartBox" id="print" v-loading="loading" element-loading-text="准备下载PDF"
       element-loading-spinner="el-icon-loading">
-      <myInforBox />
-      <myIntroBox />
+      <myInforBox :myiInfo="myiInfo" />
+      <myIntroBox :myiInfo="myiInfo" />
     </div>
     <!-- 简历 -->
 
@@ -39,6 +39,22 @@ export default {
   },
   data() {
     return {
+      myiInfo: {
+        name: '何贵江',
+        nameEn: 'Guijiang He',
+        gender: '男',
+        jobWant: 'Web前端开发',
+        moneyWant: '7k',
+        edu: '专科',
+        address: '四川成都',
+        phone: 15196923235,
+        email: '1937966358@qq.com',
+        blog: 'https://timebk.cn/',
+        github: 'https://github.com/time-demon',
+        gitee: 'https://gitee.com/time-demon',
+        csdn: 'https://blog.csdn.net/qq_19322833',
+        juejin: 'https://juejin.cn/user/770072696587341',
+      },
       display: "grid",
       clientWidth: document.documentElement.clientWidth,
       loading: false
@@ -156,7 +172,7 @@ export default {
     >.myIntroBox {
       background: #fff;
       border-radius: 0 0 10px 10px;
-      padding: 0 15px;
+      padding: 0 15px 15px;
       display: grid;
       grid-template-columns: repeat(2, 50%);
       justify-content: space-between;
@@ -224,8 +240,12 @@ export default {
       display: block;
       padding: 0;
 
-      .introBox {
+      .introBox:nth-of-type(1) {
         padding: 20px 0 10px;
+      }
+
+      .introBox {
+        padding: 10px 0 10px;
       }
     }
   }

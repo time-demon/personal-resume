@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    v: `&copy; Author 时光 v1.0.3`,
+    v: `&copy; Author 时光 v1.1.0`,
     isMobile: true
   },
   getters: {
